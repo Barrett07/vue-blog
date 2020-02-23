@@ -2,7 +2,7 @@
 <template>
   <div>
     <div class="fc-container">
-      <div class="item" v-for="(item, index) in String(value)" :key="index">
+      <div class="item" v-for="(item, index) in String(count)" :key="index">
         <div class="li" :title="item" :style="{'margin-top':computedStyle(item)}">
           <div class="num">0</div>
           <div class="num">1</div>
@@ -36,12 +36,16 @@
     
   },
 
-  props: {}, 
+  props: {
+    count: {
+      type: Number,
+      required: true,
+      default: 0,
+    }
+  }, 
 
   created () {
-    setInterval(()=>{
-      this.randomVal();
-    }, 5000)
+    
   },
 
   mounted () {
@@ -53,10 +57,6 @@
       let val = 32*Number(item);
       return `-${val}px`;
     },
-    randomVal () {
-      let val = Math.floor(Math.random() * 100000)
-      this.value = val;
-    }
   },
 
   components: { },
