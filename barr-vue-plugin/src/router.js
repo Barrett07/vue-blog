@@ -6,6 +6,10 @@ routes.push({
   path: '/personTable',
   component: ()=>import('@/test/person-table')
 })
+routes.push({
+  path: '/vueFlopCount',
+  component: ()=>import('@/test/test-flop-count')
+})
 
 export default new Router({
   mode: 'history',

@@ -1,3 +1,4 @@
+<!-- 基本信息表格 -->
 <template>
   <div>
     <div class="table-title"><span></span>{{tableTitle}}</div>
